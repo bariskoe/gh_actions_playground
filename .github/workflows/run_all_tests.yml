@@ -20,4 +20,4 @@ jobs:
       - name: Check Flutter Formatting
         run: flutter format lib/** --set-exit-if-changed
       - name: Run Flutter Tests
-        run: flutter test --no-pub
+        run: flutter test
