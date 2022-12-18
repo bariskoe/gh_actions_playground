@@ -1,5 +1,5 @@
 name: print hello and goodbye
-on: workflow_dispatch
+on: [workflow_dispatch,push]
 jobs: 
   first-job:
     runs-on: ubuntu-latest
