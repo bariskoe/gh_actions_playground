@@ -11,8 +11,8 @@ jobs:
         uses: actions/checkout@v3
       - name: Install Flutter
         run: git clone https://github.com/flutter/flutter.git --depth 1 -b $FLUTTER_VERSION _flutter
-      - name: makea clean
-        run: flutter clean
+      - name: Add Flutter to Path
+        run: echo "$GITHUB_WORKSPACE/_flutter/bin" >> $GITHUB_PATH
       - name: Install Flutter Dependencies
         run: flutter pub get
       - name: Flutter Analyze
