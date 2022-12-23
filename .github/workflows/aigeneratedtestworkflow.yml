@@ -1,0 +1,15 @@
+name: Flutter Test Workflow
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          install-latest: true
+          flutter-root: /opt/flutter
+      - run: flutter pub get
+      - run: flutter test
